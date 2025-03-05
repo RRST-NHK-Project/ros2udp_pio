@@ -1,2 +1,2 @@
 # 概要
-ros2udpパッケージのマイコン側PlatforIOプロジェクト群です。
+ros2udpパッケージのマイコン側PlatformIOプロジェクト群です。
