@@ -253,9 +253,9 @@ void receive(UDPSocket *receiver) { // UDP受信スレッド
     // 10msごとに実行
     if (now - pre > 10ms)
     {
-    int16_t current_0 = data[6] * 100; // data[6] の値をスケーリングして出力
-    int16_t current_1 = data[7] * 100;           // モーター2用の電流値
-    int16_t current_2 = data[8] * 100;          // モーター3用の電流値 
+    int16_t current_0 = data[1] * 100; // data[6] の値をスケーリングして出力
+    int16_t current_1 = data[2] * 100;           // モーター2用の電流値
+    int16_t current_2 = data[3] * 100;          // モーター3用の電流値 
         c610[0].set_raw_current(current_0);
         c610[1].set_raw_current(current_1);
         c610[2].set_raw_current(current_2);
