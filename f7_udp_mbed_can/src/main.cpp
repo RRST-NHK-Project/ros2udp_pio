@@ -260,10 +260,10 @@ void receive(UDPSocket *receiver) { // UDP受信スレッド
         c610[1].set_raw_current(current_1);
         c610[2].set_raw_current(current_2);
        // printf("data[6]: %d, darta[7]: %d, data[8]: %d\n",data[6],data[7],data[8]);
-        printf("Actual Current -> ID: %d, %d | ID: %d, %d | ID: %d, %d\n",
+        //printf("Actual Current -> ID: %d, %d | ID: %d, %d | ID: %d, %d\n",
         c610[0].get_motor_id(), c610[0].get_rpm(),
         c610[1].get_motor_id(), c610[1].get_rpm(),
-        c610[2].get_motor_id(), c610[2].get_rpm());
+        c610[2].get_motor_id(), c610[2].get_rpm();
     // //printf("RPM: %d\n", c610[0].get_rpm());
         // エンコーダーの角度を計算 (度単位)
         //m2006のエンコーダーの現在のパルス*(10/8192) = 現在のangle
@@ -283,10 +283,10 @@ void receive(UDPSocket *receiver) { // UDP受信スレッド
 
         // CANメッセージを生成して送信
         auto msg = c610.to_msgs();
-        if (!can.write(msg))
-        {
-            printf("failed to write c610 msg\n");
-        }
+        // if (!can.write(msg))
+        // {
+        //     printf("failed to write c610 msg\n");
+        // }
 
         pre = now;
     
