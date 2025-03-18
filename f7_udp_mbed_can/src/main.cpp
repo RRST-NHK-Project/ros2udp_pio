@@ -1,9 +1,9 @@
 /*
 RRST NHK2025
-IPアドレスは適宜変更すること
-垂直MD基板用にピンを変更
+IPアドレスは適宜変更
 エンコーダーから計算した変位と速度をUDPで送信する
-2025/02/05
+メイン基板V1.3
+2025/03/18
 */
 
 #include "EthernetInterface.h"
@@ -67,7 +67,7 @@ PwmOut SERVO4(PB_8);
 //トランジスタ（電磁弁・表示灯用）
 DigitalOut TR1(PF_0);
 DigitalOut TR2(PF_1);
-DigitalOut TR3(PC_10);
+DigitalOut TR3(PF_15);
 DigitalOut TR4(PC_11);
 DigitalOut TR5(PC_12);
 DigitalOut TR6(PF_14);
