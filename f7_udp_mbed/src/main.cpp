@@ -117,7 +117,7 @@ int main() {
   // 自機情報
   // const char *myIP = "192.168.8.215"; // MR_SD
   // const char *myIP = "192.168.8.216"; // MR
-  const char *myIP = "192.168.0.217"; // MD_SD
+  const char *myIP = "192.168.0.217"; // DR_SD
   // const char *myIP = "192.168.0.218"; // DR
   //const char *myIP = "192.168.128.215"; // DR on test
   const char *myNetMask = "255.255.255.0";

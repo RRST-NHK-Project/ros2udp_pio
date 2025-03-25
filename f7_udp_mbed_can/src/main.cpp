@@ -283,10 +283,10 @@ void receive(UDPSocket *receiver) { // UDP受信スレッド
 
         // CANメッセージを生成して送信
         auto msg = c610.to_msgs();
-        // if (!can.write(msg))
-        // {
-        //     printf("failed to write c610 msg\n");
-        // }
+        if (!can.write(msg))
+        {
+            printf("failed to write c610 msg\n");
+        }
 
         pre = now;
     
@@ -338,6 +338,6 @@ void receive(UDPSocket *receiver) { // UDP受信スレッド
     TR5 = data[15];
     TR6 = data[16];
     TR7 = data[17];
-    TR8 = data[18];
+    TR8 = data[15];//臨時！！直せ！
   }
 }
